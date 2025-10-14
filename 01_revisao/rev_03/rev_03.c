@@ -9,20 +9,10 @@ void lerIdentificadores(int Nlivros, int ids[]){
 
 }
 
-int naoPossuiCopia(int id, int Nlivros, int ids[]){
-    int i;
-
-    for (i = 0; i < Nlivros; i++){
-        if (id == ids[i]) return 0;
-    }
-
-    return 1;
-
-}
 
 int main(){
     int Nlivros;
-    int i;
+    int i, j;
     int copia = 0;
 
     scanf("%d\n", &Nlivros);
@@ -32,7 +22,8 @@ int main(){
     lerIdentificadores(Nlivros, ids);
 
     for (i = 0; i < Nlivros; i++){
-        if (naoPossuiCopia(ids[i], Nlivros, ids)) {
+        for (i = 0; i < Nlivros; i++){
+            if (j != i && ids[i] == ids[j]) return 0;
             printf("%d ", ids[i]);
             copia++;
         }
