@@ -10,7 +10,7 @@ char buscarAdjacente(int posX, int posY, int linhas, int colunas, int matriz[lin
     for (letra = 0; letra < 4; letra++){
         direcao = prioridade[letra];
 
-        if (direcao == 'B' && posMatrizY < linhas && matriz[posMatrizY+1][posMatrizX] == 0) {
+        if (direcao == 'B' && posMatrizY < linhas-1 && matriz[posMatrizY+1][posMatrizX] == 0) {
             retorno = 'B';
             break;
         }
@@ -18,7 +18,7 @@ char buscarAdjacente(int posX, int posY, int linhas, int colunas, int matriz[lin
             retorno = 'C';
             break;
         }
-        else if (direcao == 'D' && posMatrizX < colunas && matriz[posMatrizY][posMatrizX+1] == 0) {
+        else if (direcao == 'D' && posMatrizX < colunas-1 && matriz[posMatrizY][posMatrizX+1] == 0) {
             retorno = 'D';
             break;
         }
