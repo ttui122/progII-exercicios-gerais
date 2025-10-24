@@ -50,8 +50,12 @@ Module.symvers
 Mkfile.old
 dkms.conf
 
-c_cpp_properties.json
+*.h
+*.json
 Makefile
+*.txt
+*.csv
+*.o
 test_1
 test_2
 test_3
